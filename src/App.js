@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import Home from "./pages/home";
 import './App.css';
-
+import LanguageDropdown from "./components/common/language_dropdown"
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+		<div className="App">
+			<LanguageDropdown/>
+			<Routes>
+				<Route path="/" element={<Home />} />
+			</Routes>
+
+		</div>
+	);
 }
 
 export default App;
